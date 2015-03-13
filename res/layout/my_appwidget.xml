@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/appwidget_icon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="15dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_launcher" />
+    <ImageView
+        android:id="@+id/appwidget_shang"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignTop="@+id/appwidget_next"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="56dp"
+        android:layout_toLeftOf="@+id/appwidget_next"
+        android:src="@drawable/kg_ic_playing_bar_shang_default" />
+
+    <ImageView
+        android:id="@+id/appwidget_play"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignTop="@+id/appwidget_next"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/appwidget_next"
+        android:src="@drawable/kg_ic_playing_bar_play_default" />
+
+    <ImageView
+        android:id="@+id/appwidget_next"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:layout_alignBottom="@+id/appwidget_icon"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/kg_ic_playing_bar_next_default" />
+
+    <TextView
+        android:id="@+id/appwidget_text"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/appwidget_icon"
+        android:text="王者音乐" />
+
+</RelativeLayout>

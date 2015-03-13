@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_play"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_lockscreen_default" 
+    android:orientation="vertical" >
+
+    <include
+        android:layout_weight="0"
+        layout="@layout/play_top_bar" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_play"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+    <include
+        android:layout_weight="0"
+        layout="@layout/play_bottom_bar" />
+
+</LinearLayout>

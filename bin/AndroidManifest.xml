@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.kingmusic"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:maxSdkVersion="21"
+        android:minSdkVersion="19"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 加权限 -->
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.kingmusic.MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.kingmusic.WelcomeActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.kingmusic.PlayListActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.kingmusic.PlayActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <service android:name="com.example.kingmusic.service.Mp3Service" >
+            <intent-filter>
+                <action android:name="com.mp3" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.example.kingmusic.MainPlayActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.kingmusic.NotificationActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <receiver android:name="com.example.kingmusic.broadcastreceiver.PlayBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="prev" />
+                <action android:name="next" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.example.kingmusic.MyLoveActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.kingmusic.MvActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.kingmusic.ZuijinActivity"
+            android:label="@string/title_activity_zuijin" >
+        </activity>
+        <!-- 窗体小部件广播接收者 -->
+        <receiver android:name="com.example.kingmusic.provider.MyAppWidgetProvider" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/my_appwidget_info" />
+        </receiver>
+    </application>
+	<!-- 屏幕适配 -->
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+</manifest>

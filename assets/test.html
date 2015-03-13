@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script>
+    function showUsers(json){
+    	//json以表格形式显示
+    	//1.将json解析
+    	var data = eval(json);//  data[i].mp3Title  
+    	//2.找到表格
+    	var table = document.getElementById("mytable");
+    	for(var i=0;i<data.length;i++){
+    		//3.在表格的第二行插入行
+    		var tr = table.insertRow(i+1);
+    		//4.插入列
+    		var td1 = tr.insertCell(0);
+    		//5.节点数据
+    		var node1 = document.createTextNode(data[i].mp3Title);
+    		//6.将节点放到td1
+    		alert(mytable);
+    		td1.appendChild(node1);
+    		//加入按钮
+    		var td2 = tr.insertCell(1);
+    		td2.innerHTML = "<input type='button' value='下载' onclick='javaScript:xjl.call()'/>";
+    	}
+    }
+</script>
+</head>
+<body onload="javaScript:xjl.showAllUsers()">
+<table id="mytable" width="100%" cellspacing="0" cellpadding="0" border="1">	
+<th>歌曲名</th><th>操作</th>
+</table>
+</body>
+</html>
+
+
+

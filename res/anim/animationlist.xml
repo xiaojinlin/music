@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:drawable="@drawable/cmmusic_progress_1" android:duration="200"/>
+    <item android:drawable="@drawable/cmmusic_progress_2" android:duration="200"/>
+    <item android:drawable="@drawable/cmmusic_progress_3" android:duration="200"/>
+    <item android:drawable="@drawable/cmmusic_progress_4" android:duration="200"/>
+    <item android:drawable="@drawable/cmmusic_progress_5" android:duration="200"/>
+    <item android:drawable="@drawable/cmmusic_progress_6" android:duration="200"/>
+    <item android:drawable="@drawable/cmmusic_progress_7" android:duration="200"/>
+    <item android:drawable="@drawable/cmmusic_progress_8" android:duration="200"/>
+    <!-- <item android:drawable="@drawable/a9" android:duration="200"/>
+    <item android:drawable="@drawable/a10" android:duration="200"/>
+    <item android:drawable="@drawable/a11" android:duration="200"/>
+    <item android:drawable="@drawable/a12" android:duration="200"/>
+ -->
+</animation-list>
